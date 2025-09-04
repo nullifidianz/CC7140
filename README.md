@@ -7,7 +7,7 @@ Trabalho de Desenvolvimento de Jogos apresentado ao Centro Universitário [FEI](
 - Gabriela 
 - João Paulo Paggi Zuanon Dias
 - Mateus Rocha
-- Luis
+- Luis Marim
 
 ## Tópicos
 - [Introdução](./docs/1-introducao.md)

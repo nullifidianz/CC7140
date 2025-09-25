@@ -4,7 +4,7 @@ Trabalho de Desenvolvimento de Jogos apresentado ao Centro Universitário [FEI](
 ## Componentes do Grupo
 
 - Anna Carolina Zomer
-- Gabriela 
+- Gabriela Molina Ciocci
 - João Paulo Paggi Zuanon Dias
 - Mateus Rocha
 - Luis Marim

@@ -19,3 +19,6 @@
 
 ### Fase Coração
 <img width="721" height="725" alt="image" src="https://github.com/user-attachments/assets/7a36d2c5-8159-4928-a95b-fd06ec814321" />
+
+### Fase Oito
+<img width="391" height="628" alt="image" src="https://github.com/user-attachments/assets/b14ffff5-7d22-439c-9d27-8fed25b5e5ca" />

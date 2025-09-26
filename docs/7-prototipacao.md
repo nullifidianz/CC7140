@@ -15,10 +15,11 @@
 - Jogador tem mais de um caminho para seguir, e o fator "vai e vem" é muito importante para sua conclusão.
 
 ### Fase Mochileiro
-<img width="620" height="607" alt="image" src="https://github.com/user-attachments/assets/1ef9ac28-be41-49d0-8ada-e5ac7f0f03ef" />
+<img width="1600" height="1600" alt="image" src="https://github.com/user-attachments/assets/7b6c80d7-fd3e-4687-8c94-a88a89048ea6" />
 
 ### Fase Coração
-<img width="721" height="725" alt="image" src="https://github.com/user-attachments/assets/7a36d2c5-8159-4928-a95b-fd06ec814321" />
+<img width="1600" height="1600" alt="image" src="https://github.com/user-attachments/assets/4152f7f4-577d-47a9-9015-c8b5d7b5a622" />
 
 ### Fase Oito
-<img width="391" height="628" alt="image" src="https://github.com/user-attachments/assets/b14ffff5-7d22-439c-9d27-8fed25b5e5ca" />
+<img width="999" height="1600" alt="image" src="https://github.com/user-attachments/assets/9d462117-4caa-43dc-a9bf-e611d7f07b9e" />
+

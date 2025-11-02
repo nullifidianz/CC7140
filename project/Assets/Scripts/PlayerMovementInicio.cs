@@ -41,7 +41,6 @@ public class PlayerMovementInicio : MonoBehaviour
         }
 
         xPosLastFrame = transform.position.x;
-        print(xPosLastFrame);
     }
 
     private void HandleMovement()

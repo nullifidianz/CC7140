@@ -1,50 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovementInicio : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private Vector2 movement;
+    private float playerHalfWidth;
+    private float xPosLastFrame;
     public Animator _animator;
-    private SpriteRenderer spriteRenderer;
-    private Camera mainCamera;
+    private Vector2 screenBounds;
+
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        mainCamera = Camera.main;
+        _animator = GetComponent<Animator>();
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        playerHalfWidth = spriteRenderer.bounds.extents.x;
     }
 
     void Update()
     {
-        bool rightPressed = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
-        bool leftPressed = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        HandleMovement();
+        //ClampMovement();
+        FlipCharacterX();
+    }
 
-        // Set animation state
-        bool isWalking = rightPressed || leftPressed;
-        _animator.SetBool("IsWalking", isWalking);
-
-        // Calculate movement
-        float moveDirection = 0f;
-        if (rightPressed) moveDirection = 1f;
-        if (leftPressed) moveDirection = -1f;
-
-        // Move both player and camera
-        Vector3 movement = new Vector3(moveDirection * moveSpeed * Time.deltaTime, 0f, 0f);
-        transform.position += movement;
-        mainCamera.transform.position += movement;
-
-        // Flip sprite based on key press
-        if (rightPressed)
+    private void FlipCharacterX()
+    {
+        float input = Input.GetAxis("Horizontal");
+        if (input > 0 && (transform.position.x > xPosLastFrame))
         {
             spriteRenderer.flipX = false;
         }
-        else if (leftPressed)
+        else if (input < 0 && (transform.position.x < xPosLastFrame))
         {
             spriteRenderer.flipX = true;
         }
+
+        xPosLastFrame = transform.position.x;
+        print(xPosLastFrame);
     }
+
+    private void HandleMovement()
+    {
+        float input = Input.GetAxis("Horizontal");
+        movement.x = input * moveSpeed * Time.deltaTime;
+        transform.Translate(movement);
+        if (input != 0)
+        {
+            _animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            _animator.SetBool("IsWalking", false);
+        }
+    }
+
+    private void ClampMovement()
+    {
+        float clampedX = Mathf.Clamp(transform.position.x, -screenBounds.x + playerHalfWidth, screenBounds.x - playerHalfWidth);
+        Vector2 pos = transform.position;
+        pos.x = clampedX;
+        transform.position = pos;
+    }
+
 }

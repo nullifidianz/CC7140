@@ -131,10 +131,10 @@ TextureImporter:
         serializedVersion: 2
         x: 5
         y: 0
-        width: 310
+        width: 147
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,14 +149,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d03210d30a5bf234586734a5249ffb9e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Handmill_0: 3611005757817217984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

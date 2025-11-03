@@ -10,6 +10,7 @@ TagManager:
   - Artefato
   - Dialogo
   - Portal
+  - Troll
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,12 @@ public class AtivarCutscene : MonoBehaviour
     [Header("Configurações do Artefato")]
     public bool destruirArtefatoNoFinal = true;  // Destruir a moeda no final da cutscene?
     
+    [Header("Configurações de Explosão")]
+    public GameObject explosaoObject;  // Arraste o GameObject da explosão aqui
+    
+    [Header("Configurações do Portal")]
+    public GameObject portalObject;  // Arraste o GameObject do portal aqui
+    
     private bool cutsceneAtivada = false;      // Impede que a cutscene seja ativada múltiplas vezes
     private PlayerMovement playerMovement;
     private PlayerMovementInicio playerMovementInicio;
@@ -41,6 +47,18 @@ public class AtivarCutscene : MonoBehaviour
         if (mainCamera != null)
         {
             cinemachineBrain = mainCamera.GetComponent<CinemachineBrain>();
+        }
+        
+        // Garante que a explosão começa desativada
+        if (explosaoObject != null)
+        {
+            explosaoObject.SetActive(false);
+        }
+        
+        // Garante que o portal começa desativado
+        if (portalObject != null)
+        {
+            portalObject.SetActive(false);
         }
     }
 
@@ -99,6 +117,22 @@ public class AtivarCutscene : MonoBehaviour
         // Espera a cutscene terminar
         float duracao = (float)timelineDirector.duration;
         yield return new WaitForSeconds(duracao);
+        
+        // Ativa a explosão no final da cutscene
+        if (explosaoObject != null)
+        {
+            explosaoObject.SetActive(true);
+            
+            // A explosão será destruída automaticamente pelo seu próprio Animator/Script
+            // ou você pode descomentar a linha abaixo para destruir após X segundos:
+            // Destroy(explosaoObject, 2f);
+        }
+        
+        // Ativa o portal no final da cutscene (fica permanente)
+        if (portalObject != null)
+        {
+            portalObject.SetActive(true);
+        }
         
         // Destrói o artefato no final da cutscene
         if (destruirArtefatoNoFinal && artefatoColetado != null)

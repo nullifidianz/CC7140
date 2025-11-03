@@ -9,6 +9,7 @@ TagManager:
   - Escada
   - Artefato
   - Dialogo
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ TagManager:
   - Moveis
   - Ground
   - Escada
+  - Artefato
+  - Dialogo
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Wall
   - 
   - 
   - 

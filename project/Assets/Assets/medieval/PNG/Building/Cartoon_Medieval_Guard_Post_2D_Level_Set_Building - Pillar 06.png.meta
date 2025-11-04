@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Pillar 06_0: 8934091782212562080
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

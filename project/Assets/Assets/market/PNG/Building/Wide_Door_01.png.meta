@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wide_Door_01_0: 2787990331485116983
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

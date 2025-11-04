@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Platformer - Ground 04_0: -2361153914708593676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

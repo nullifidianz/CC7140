@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Decor 02_0: -6053850035255151488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

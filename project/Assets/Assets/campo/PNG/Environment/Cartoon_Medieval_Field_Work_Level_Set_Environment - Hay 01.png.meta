@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Hay 01_0: 4761298792117047104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

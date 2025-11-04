@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Building - Pillar 07_0: -7478918687518503388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

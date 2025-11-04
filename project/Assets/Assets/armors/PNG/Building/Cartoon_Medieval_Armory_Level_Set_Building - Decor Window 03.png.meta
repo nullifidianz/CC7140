@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Building - Decor Window 03_0: -5408167871760057357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

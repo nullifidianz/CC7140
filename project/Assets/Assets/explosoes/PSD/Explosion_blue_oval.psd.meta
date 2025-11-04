@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Explosion_blue_oval_0: -8917737107307513177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

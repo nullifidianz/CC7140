@@ -540,7 +540,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Circle_explosion6_0: -6941864040324256231
+      Circle_explosion6_1: -5511558766805256876
+      Circle_explosion6_10: 1998928158534533044
+      Circle_explosion6_11: 209268375712903148
+      Circle_explosion6_12: 9165847075583948705
+      Circle_explosion6_13: -8779978070548915194
+      Circle_explosion6_14: -3043495567398874064
+      Circle_explosion6_15: 136956780699078916
+      Circle_explosion6_16: 3534413306141626180
+      Circle_explosion6_2: -595208384783847248
+      Circle_explosion6_3: -3477589055569988993
+      Circle_explosion6_4: 4567491574936065700
+      Circle_explosion6_5: -8462793149888918530
+      Circle_explosion6_6: 4225403321596902012
+      Circle_explosion6_7: -1484477356880363353
+      Circle_explosion6_8: 8821076586434953704
+      Circle_explosion6_9: 7750842505061514141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

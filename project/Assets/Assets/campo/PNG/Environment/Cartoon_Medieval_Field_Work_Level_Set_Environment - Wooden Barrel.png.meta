@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Wooden Barrel_0: 6741047430146858819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

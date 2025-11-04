@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Chimney 01_0: -5011371801584725459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Rock 03_0: 7921745306386204656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

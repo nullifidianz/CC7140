@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Wide Door 03_0: 1281684964797743411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

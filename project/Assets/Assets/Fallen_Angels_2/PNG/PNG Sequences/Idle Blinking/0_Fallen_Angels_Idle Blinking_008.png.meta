@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      0_Fallen_Angels_Idle Blinking_008_0: 964321169669768908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Environment - Fence_0: -566341659616718384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

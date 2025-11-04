@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      0_Fallen_Angels_Running_003_0: 1121960864871406182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

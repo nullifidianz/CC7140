@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Platformer - Ground 04_0: -1647600764487343931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -981,9 +981,9 @@ GameObject:
   - component: {fileID: 427285349}
   - component: {fileID: 427285350}
   - component: {fileID: 427285351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest_01_Locked_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

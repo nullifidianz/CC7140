@@ -57,7 +57,6 @@ public class Espinhos : MonoBehaviour
     private float contadorTempo = 0f;
     private bool cicloAtivado = false;
     private bool primeiraAtivacao = true; // Controla se é a primeira vez que ativa
-    private bool cicloCompletado = false; // Rastreia se um ciclo foi completado
     private bool jaExecutouUmaVez = false; // Flag permanente para movimento não contínuo
 
     private enum EstadoEspinho
@@ -111,20 +110,7 @@ public class Espinhos : MonoBehaviour
             {
                 VerificarProximidadePlayer();
                 
-                // Detecta quando o player SAI do range após ter completado um ciclo
-                if (!playerProximo && playerProximoAnterior && cicloCompletado && movimentoContinuo)
-                {
-                    // Prepara para um novo ciclo quando o player voltar (APENAS se movimento for contínuo)
-                    primeiraAtivacao = true;
-                    cicloCompletado = false;
-                    
-                    if (mostrarDebug)
-                    {
-                        Debug.Log("[Espinhos] Player saiu do range. Pronto para nova ativação (modo contínuo).");
-                    }
-                }
-                
-                // Detecta quando o player ENTRA no range
+                // Detecta quando o player ENTRA no range pela primeira vez
                 if (playerProximo && !playerProximoAnterior && primeiraAtivacao && estadoAtual == EstadoEspinho.Embaixo)
                 {
                     // Se movimento não é contínuo e já executou uma vez, não ativa novamente
@@ -242,9 +228,10 @@ public class Espinhos : MonoBehaviour
                         Debug.Log("[Espinhos] >>> PRIMEIRA ATIVAÇÃO! Subindo IMEDIATAMENTE (sem esperar) <<<");
                     }
                 }
-                else if (movimentoContinuo)
+                else if (movimentoContinuo && cicloAtivado)
                 {
                     // Ciclos contínuos - aguarda tempo de espera e sobe novamente
+                    // (independente de onde o player está)
                     contadorTempo += Time.deltaTime;
                     
                     if (mostrarDebug && contadorTempo < 0.1f)
@@ -325,26 +312,12 @@ public class Espinhos : MonoBehaviour
                     if (movimentoContinuo)
                     {
                         // Movimento contínuo: mantém o ciclo ativo e continua repetindo
+                        // independentemente da distância do player
                         primeiraAtivacao = false;
                         
-                        if (apenasComPlayer)
+                        if (mostrarDebug)
                         {
-                            // Com detecção de player: para e aguarda player sair e voltar
-                            cicloAtivado = false;
-                            cicloCompletado = true;
-                            
-                            if (mostrarDebug)
-                            {
-                                Debug.Log("[Espinhos] Ciclo COMPLETADO. Aguardando player sair e voltar ao range para repetir.");
-                            }
-                        }
-                        else
-                        {
-                            // Modo automático: aguarda tempo de espera e repete
-                            if (mostrarDebug)
-                            {
-                                Debug.Log($"[Espinhos] Modo contínuo - Aguardando {tempoEspera}s antes de repetir.");
-                            }
+                            Debug.Log($"[Espinhos] Modo contínuo - Aguardando {tempoEspera}s antes de repetir (independente do player).");
                         }
                     }
                     else
@@ -353,11 +326,6 @@ public class Espinhos : MonoBehaviour
                         cicloAtivado = false;
                         primeiraAtivacao = true;
                         jaExecutouUmaVez = true; // Marca que já executou (não vai mais executar)
-                        
-                        if (apenasComPlayer)
-                        {
-                            cicloCompletado = true;
-                        }
                         
                         if (mostrarDebug)
                         {
@@ -415,7 +383,6 @@ public class Espinhos : MonoBehaviour
             contadorTempo = 0f;
             cicloAtivado = false;
             primeiraAtivacao = true;
-            cicloCompletado = false;
             playerProximoAnterior = false;
             jaExecutouUmaVez = false;
             

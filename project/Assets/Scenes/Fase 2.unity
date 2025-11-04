@@ -3680,7 +3680,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.9330869, y: 0.02681017}
+  m_Offset: {x: 1.2495768, y: 0.02681017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3690,7 +3690,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.1461735, y: 6.3203382}
+  m_Size: {x: 2.5131936, y: 6.3203382}
   m_EdgeRadius: 0
 --- !u!1 &1618475806
 GameObject:
@@ -3703,11 +3703,11 @@ GameObject:
   - component: {fileID: 1618475814}
   - component: {fileID: 1618475813}
   - component: {fileID: 1618475812}
+  - component: {fileID: 1618475815}
   - component: {fileID: 1618475810}
   - component: {fileID: 1618475809}
   - component: {fileID: 1618475808}
   - component: {fileID: 1618475807}
-  - component: {fileID: 1618475815}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Player

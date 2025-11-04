@@ -51,7 +51,6 @@ public class Paredes : MonoBehaviour
     private float contadorTempo;
     private bool cicloAtivado;
     private bool primeiraAtivacao = true;
-    private bool cicloCompletado;
     private bool jaExecutouUmaVez;
 
     private enum EstadoParede
@@ -93,20 +92,7 @@ public class Paredes : MonoBehaviour
         {
             VerificarProximidadePlayer();
             
-            // Detecta quando o player SAI do range após ter completado um ciclo
-            if (!playerProximo && playerProximoAnterior && cicloCompletado && movimentoContinuo)
-            {
-                // Prepara para um novo ciclo quando o player voltar (APENAS se movimento for contínuo)
-                primeiraAtivacao = true;
-                cicloCompletado = false;
-                
-                if (mostrarDebug)
-                {
-                    Debug.Log("[Paredes] Player saiu do range. Pronto para nova ativação (modo contínuo).");
-                }
-            }
-            
-            // Detecta quando o player ENTRA no range
+            // Detecta quando o player ENTRA no range pela primeira vez
             if (playerProximo && !playerProximoAnterior && primeiraAtivacao && estadoAtual == EstadoParede.Embaixo)
             {
                 // Se movimento não é contínuo e já executou uma vez, não ativa novamente
@@ -232,9 +218,10 @@ public class Paredes : MonoBehaviour
                         Debug.Log("[Paredes] >>> PRIMEIRA ATIVAÇÃO! Subindo IMEDIATAMENTE (sem esperar) <<<");
                     }
                 }
-                else if (movimentoContinuo)
+                else if (movimentoContinuo && cicloAtivado)
                 {
                     // Ciclos contínuos - aguarda tempo de espera e sobe novamente
+                    // (independente de onde o player está)
                     contadorTempo += Time.deltaTime;
                     
                     if (mostrarDebug && contadorTempo < 0.1f)
@@ -315,26 +302,12 @@ public class Paredes : MonoBehaviour
                     if (movimentoContinuo)
                     {
                         // Movimento contínuo: mantém o ciclo ativo e continua repetindo
+                        // independentemente da distância do player
                         primeiraAtivacao = false;
                         
-                        if (apenasComPlayer)
+                        if (mostrarDebug)
                         {
-                            // Com detecção de player: para e aguarda player sair e voltar
-                            cicloAtivado = false;
-                            cicloCompletado = true;
-                            
-                            if (mostrarDebug)
-                            {
-                                Debug.Log("[Paredes] Ciclo COMPLETADO. Aguardando player sair e voltar ao range para repetir.");
-                            }
-                        }
-                        else
-                        {
-                            // Modo automático: aguarda tempo de espera e repete
-                            if (mostrarDebug)
-                            {
-                                Debug.Log($"[Paredes] Modo contínuo - Aguardando {tempoEspera}s antes de repetir.");
-                            }
+                            Debug.Log($"[Paredes] Modo contínuo - Aguardando {tempoEspera}s antes de repetir (independente do player).");
                         }
                     }
                     else
@@ -343,11 +316,6 @@ public class Paredes : MonoBehaviour
                         cicloAtivado = false;
                         primeiraAtivacao = true;
                         jaExecutouUmaVez = true; // Marca que já executou (não vai mais executar)
-                        
-                        if (apenasComPlayer)
-                        {
-                            cicloCompletado = true;
-                        }
                         
                         if (mostrarDebug)
                         {
@@ -367,7 +335,6 @@ public class Paredes : MonoBehaviour
         contadorTempo = 0f;
         cicloAtivado = false;
         primeiraAtivacao = true;
-        cicloCompletado = false;
         playerProximoAnterior = false;
         jaExecutouUmaVez = false;
         

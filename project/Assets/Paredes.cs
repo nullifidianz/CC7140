@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Paredes : MonoBehaviour
@@ -36,6 +34,10 @@ public class Paredes : MonoBehaviour
     [Tooltip("Movimento contínuo (ciclo infinito) ou apenas uma vez")]
     public bool movimentoContinuo = true;
     
+    [Header("Requer Artefato")]
+    [Tooltip("Se marcado, a parede só começa a funcionar após o player pegar o artefato")]
+    public bool requerArtefato = false;
+    
     [Header("Debug")]
     [Tooltip("Mostrar mensagens de debug no Console")]
     public bool mostrarDebug = false;
@@ -43,13 +45,14 @@ public class Paredes : MonoBehaviour
     private Transform playerTransform;
     private Vector3 posicaoInicial;
     private Vector3 posicaoAlvo;
-    private bool playerProximo = false;
-    private bool playerProximoAnterior = false; // Rastreia o estado anterior do player
+    private bool playerProximo;
+    private bool playerProximoAnterior;
     private EstadoParede estadoAtual = EstadoParede.Embaixo;
-    private float contadorTempo = 0f;
-    private bool cicloAtivado = false;
-    private bool primeiraAtivacao = true; // Controla se é a primeira vez que ativa
-    private bool cicloCompletado = false; // Rastreia se um ciclo foi completado
+    private float contadorTempo;
+    private bool cicloAtivado;
+    private bool primeiraAtivacao = true;
+    private bool cicloCompletado;
+    private bool jaExecutouUmaVez;
 
     private enum EstadoParede
     {
@@ -73,42 +76,51 @@ public class Paredes : MonoBehaviour
 
     void Start()
     {
-        // Salva a posição inicial
         posicaoInicial = transform.position;
-        
-        // Calcula a posição alvo baseada no tipo de movimento
         CalcularPosicaoAlvo();
-        
-        if (mostrarDebug)
-        {
-            Debug.Log($"[Paredes] Iniciado! Posição Inicial: {posicaoInicial}, Posição Alvo: {posicaoAlvo}");
-        }
     }
 
     void Update()
     {
+        // Se requer artefato e ainda não foi pego, não faz nada
+        if (requerArtefato && !GameState.ArtefatoFoiPegado())
+        {
+            return;
+        }
+        
         // Verifica proximidade do player se necessário
         if (apenasComPlayer)
         {
             VerificarProximidadePlayer();
             
             // Detecta quando o player SAI do range após ter completado um ciclo
-            if (!playerProximo && playerProximoAnterior && cicloCompletado)
+            if (!playerProximo && playerProximoAnterior && cicloCompletado && movimentoContinuo)
             {
-                // Prepara para um novo ciclo quando o player voltar
+                // Prepara para um novo ciclo quando o player voltar (APENAS se movimento for contínuo)
                 primeiraAtivacao = true;
                 cicloCompletado = false;
                 
                 if (mostrarDebug)
                 {
-                    Debug.Log("[Paredes] Player saiu do range. Pronto para nova ativação.");
+                    Debug.Log("[Paredes] Player saiu do range. Pronto para nova ativação (modo contínuo).");
                 }
             }
             
             // Detecta quando o player ENTRA no range
             if (playerProximo && !playerProximoAnterior && primeiraAtivacao && estadoAtual == EstadoParede.Embaixo)
             {
-                IniciarCiclo();
+                // Se movimento não é contínuo e já executou uma vez, não ativa novamente
+                if (!movimentoContinuo && jaExecutouUmaVez)
+                {
+                    if (mostrarDebug)
+                    {
+                        Debug.Log("[Paredes] Movimento não contínuo já foi executado. Não ativa novamente.");
+                    }
+                }
+                else
+                {
+                    IniciarCiclo();
+                }
             }
             
             // Atualiza o estado anterior
@@ -220,9 +232,9 @@ public class Paredes : MonoBehaviour
                         Debug.Log("[Paredes] >>> PRIMEIRA ATIVAÇÃO! Subindo IMEDIATAMENTE (sem esperar) <<<");
                     }
                 }
-                else if (movimentoContinuo && !apenasComPlayer)
+                else if (movimentoContinuo)
                 {
-                    // Ciclos contínuos APENAS no modo automático (sem detecção de player)
+                    // Ciclos contínuos - aguarda tempo de espera e sobe novamente
                     contadorTempo += Time.deltaTime;
                     
                     if (mostrarDebug && contadorTempo < 0.1f)
@@ -241,7 +253,7 @@ public class Paredes : MonoBehaviour
                         }
                     }
                 }
-                // Se não for primeira ativação E (não for contínuo OU for modo com player), não faz nada (aguarda nova ativação)
+                // Se não for primeira ativação e não for contínuo, não faz nada (aguarda nova ativação)
                 break;
 
             case EstadoParede.Subindo:
@@ -300,37 +312,46 @@ public class Paredes : MonoBehaviour
                     }
                     
                     // Decide o que fazer após voltar embaixo
-                    if (apenasComPlayer)
+                    if (movimentoContinuo)
                     {
-                        // Modo com detecção de player: para o ciclo e marca como completado
-                        // Só vai ativar novamente quando o player sair e voltar ao range
-                        cicloAtivado = false;
-                        cicloCompletado = true;
-                        
-                        if (mostrarDebug)
-                        {
-                            Debug.Log("[Paredes] Ciclo COMPLETADO. Aguardando player sair e voltar ao range para nova ativação.");
-                        }
-                    }
-                    else if (movimentoContinuo)
-                    {
-                        // Modo automático contínuo: mantém o ciclo ativo
+                        // Movimento contínuo: mantém o ciclo ativo e continua repetindo
                         primeiraAtivacao = false;
                         
-                        if (mostrarDebug)
+                        if (apenasComPlayer)
                         {
-                            Debug.Log($"[Paredes] Modo automático contínuo - Aguardando {tempoEspera}s antes de subir novamente.");
+                            // Com detecção de player: para e aguarda player sair e voltar
+                            cicloAtivado = false;
+                            cicloCompletado = true;
+                            
+                            if (mostrarDebug)
+                            {
+                                Debug.Log("[Paredes] Ciclo COMPLETADO. Aguardando player sair e voltar ao range para repetir.");
+                            }
+                        }
+                        else
+                        {
+                            // Modo automático: aguarda tempo de espera e repete
+                            if (mostrarDebug)
+                            {
+                                Debug.Log($"[Paredes] Modo contínuo - Aguardando {tempoEspera}s antes de repetir.");
+                            }
                         }
                     }
                     else
                     {
-                        // Modo automático não contínuo: para o ciclo completamente
+                        // Movimento NÃO contínuo: para o ciclo completamente após uma execução
                         cicloAtivado = false;
                         primeiraAtivacao = true;
+                        jaExecutouUmaVez = true; // Marca que já executou (não vai mais executar)
+                        
+                        if (apenasComPlayer)
+                        {
+                            cicloCompletado = true;
+                        }
                         
                         if (mostrarDebug)
                         {
-                            Debug.Log("[Paredes] Modo automático não contínuo - Ciclo FINALIZADO.");
+                            Debug.Log("[Paredes] Movimento não contínuo - Ciclo FINALIZADO (não executará novamente nesta cena).");
                         }
                     }
                 }
@@ -348,6 +369,7 @@ public class Paredes : MonoBehaviour
         primeiraAtivacao = true;
         cicloCompletado = false;
         playerProximoAnterior = false;
+        jaExecutouUmaVez = false;
         
         if (mostrarDebug)
         {

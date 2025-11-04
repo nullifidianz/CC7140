@@ -11,6 +11,9 @@ public class Artefato : MonoBehaviour
         // Verifica se o objeto que colidiu foi o Player
         if (other.CompareTag("Player"))
         {
+            // Marca que o artefato foi pego (para ativar mecânicas que dependem disso)
+            GameState.MarcarArtefatoPegado();
+            
             // Ativa o portal após pegar o artefato (se houver um portal configurado)
             if (portalParaAtivar != null)
             {

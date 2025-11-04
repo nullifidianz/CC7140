@@ -11,6 +11,8 @@ TagManager:
   - Dialogo
   - Portal
   - Troll
+  - BonusArtefato
+  - BonusTroll
   layers:
   - Default
   - TransparentFX

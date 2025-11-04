@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Decor_Window_01_0: 315016237838637738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

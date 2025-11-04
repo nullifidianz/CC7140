@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      0_Fallen_Angels_Dying_005_0: 4587522397336758103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

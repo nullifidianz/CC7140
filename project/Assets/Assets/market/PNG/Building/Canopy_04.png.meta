@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Canopy_04_0: -6758738990225986479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

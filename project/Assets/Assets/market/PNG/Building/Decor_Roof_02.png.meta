@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Decor_Roof_02_0: -5835214757431069409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

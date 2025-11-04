@@ -924,7 +924,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Circle_explosion10_0: -6686098388612157126
+      Circle_explosion10_1: -1423373162181480287
+      Circle_explosion10_10: 1517651496489107015
+      Circle_explosion10_11: -8511306472631108659
+      Circle_explosion10_12: -8722637570832781502
+      Circle_explosion10_13: -7714350831365859659
+      Circle_explosion10_14: 7217043612586972283
+      Circle_explosion10_15: -5291252663633869254
+      Circle_explosion10_16: -29392772702004680
+      Circle_explosion10_17: -545364870011807334
+      Circle_explosion10_18: -584174423944258097
+      Circle_explosion10_19: -3357501048814612665
+      Circle_explosion10_2: 9025892530694907921
+      Circle_explosion10_20: 6264965327937727809
+      Circle_explosion10_21: -4527419454200604425
+      Circle_explosion10_22: 9200329258704448716
+      Circle_explosion10_23: 845774958377859530
+      Circle_explosion10_24: -2006451264452411460
+      Circle_explosion10_25: -1891839636068165410
+      Circle_explosion10_26: -4212600663757460366
+      Circle_explosion10_27: 6744951874123787732
+      Circle_explosion10_28: 3399816634083324029
+      Circle_explosion10_29: -7881425972348218347
+      Circle_explosion10_3: -3456887048516223188
+      Circle_explosion10_30: 3988561628821573628
+      Circle_explosion10_31: -6538946806194037139
+      Circle_explosion10_32: 864027730047110494
+      Circle_explosion10_4: -1301427412282494865
+      Circle_explosion10_5: 5338688514674321525
+      Circle_explosion10_6: 3802000795531274874
+      Circle_explosion10_7: 2460881529842452685
+      Circle_explosion10_8: -5502863254202763
+      Circle_explosion10_9: -3791254690420653990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

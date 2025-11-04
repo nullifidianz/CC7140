@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Chimney 03_0: 7990485749199979775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

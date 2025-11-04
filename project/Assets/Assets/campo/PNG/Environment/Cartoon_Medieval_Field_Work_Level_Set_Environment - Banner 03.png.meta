@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Banner 03_0: -7856898230506968056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

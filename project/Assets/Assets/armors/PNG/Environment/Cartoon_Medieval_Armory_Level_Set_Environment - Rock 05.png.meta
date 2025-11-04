@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Environment - Rock 05_0: -9128993576305531059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Building - Wall A 02_0: 2454219056803425477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      0_Fallen_Angels_Throwing_008_0: -2237258948263014662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

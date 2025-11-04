@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Roof A 03_0: -5974691380093529764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

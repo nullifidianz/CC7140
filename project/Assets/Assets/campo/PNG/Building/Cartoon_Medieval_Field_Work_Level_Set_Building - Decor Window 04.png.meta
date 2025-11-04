@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Decor Window 04_0: 7056847169218983843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

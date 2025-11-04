@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Background - Layer 00_0: -8338669483567243141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

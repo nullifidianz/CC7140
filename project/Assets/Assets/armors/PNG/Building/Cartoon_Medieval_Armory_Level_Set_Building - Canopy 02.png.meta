@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Building - Canopy 02_0: 6076790898665996150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

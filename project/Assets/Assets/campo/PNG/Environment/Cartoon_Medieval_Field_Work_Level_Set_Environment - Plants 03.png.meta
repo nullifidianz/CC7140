@@ -180,7 +180,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Plants 03_0: 2796125165871157626
+      Cartoon_Medieval_Field_Work_Level_Set_Environment - Plants 03_1: 2376951273253823152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

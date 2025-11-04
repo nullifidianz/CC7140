@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Decor_Potions_01_0: -1439915785704255888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall_B_02_0: -5246049651841970838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

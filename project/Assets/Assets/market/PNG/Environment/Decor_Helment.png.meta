@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Decor_Helment_0: 5304508814661045224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

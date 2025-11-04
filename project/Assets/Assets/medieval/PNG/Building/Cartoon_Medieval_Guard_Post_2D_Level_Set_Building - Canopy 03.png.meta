@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Canopy 03_0: -8846564002203813296
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

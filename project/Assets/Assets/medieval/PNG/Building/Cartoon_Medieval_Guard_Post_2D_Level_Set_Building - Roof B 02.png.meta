@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Roof B 02_0: 2476671204561992663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

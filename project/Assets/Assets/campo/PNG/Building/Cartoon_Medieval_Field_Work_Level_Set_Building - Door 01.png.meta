@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Door 01_0: -7146460241163792348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

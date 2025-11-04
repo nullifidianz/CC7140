@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Ladder 02_0: 7320089344405418798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

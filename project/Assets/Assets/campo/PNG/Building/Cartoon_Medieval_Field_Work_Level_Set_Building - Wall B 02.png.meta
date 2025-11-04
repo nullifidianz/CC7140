@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Wall B 02_0: -5516399583904235945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

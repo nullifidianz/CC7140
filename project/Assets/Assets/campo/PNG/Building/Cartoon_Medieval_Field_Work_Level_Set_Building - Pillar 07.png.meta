@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Pillar 07_0: -5014116837540379369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

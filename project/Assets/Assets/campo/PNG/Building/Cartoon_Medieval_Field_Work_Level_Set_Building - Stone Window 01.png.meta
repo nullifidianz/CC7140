@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Field_Work_Level_Set_Building - Stone Window 01_0: 8953685376378294125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

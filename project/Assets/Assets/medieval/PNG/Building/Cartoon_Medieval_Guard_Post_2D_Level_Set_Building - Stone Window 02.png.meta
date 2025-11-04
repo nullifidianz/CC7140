@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Stone Window 02_0: -5010980557927085445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

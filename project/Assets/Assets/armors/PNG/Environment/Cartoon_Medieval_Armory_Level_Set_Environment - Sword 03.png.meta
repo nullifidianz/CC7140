@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Environment - Sword 03_0: 7597981718754363906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

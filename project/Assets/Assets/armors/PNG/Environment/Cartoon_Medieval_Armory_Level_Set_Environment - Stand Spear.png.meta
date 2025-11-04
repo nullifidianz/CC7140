@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cartoon_Medieval_Armory_Level_Set_Environment - Stand Spear_0: 7030246431276568720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

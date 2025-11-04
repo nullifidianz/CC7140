@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Trade_Tent_01_0: -6752582316824231285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Bonus : MonoBehaviour
 {
@@ -22,12 +21,24 @@ public class Bonus : MonoBehaviour
     [Tooltip("Duração da animação de subida do artefato")]
     public float duracaoSubidaArtefato = 0.3f;
     
+    [Header("Áudio")]
+    [Tooltip("Som que toca quando o bônus é ativado")]
+    public AudioClip somBonus;
+    
     private Vector3 posicaoInicial;
     private bool jaFoiAtivado = false;
+    private AudioSource audioSource;
     
     void Start()
     {
         posicaoInicial = transform.position;
+        
+        // Pega ou adiciona o AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
     
     void OnCollisionEnter2D(Collision2D collision)
@@ -101,6 +112,13 @@ public class Bonus : MonoBehaviour
     {
         Debug.Log($"[Bonus] ProcessarBonus chamado! Tag da caixinha: {gameObject.tag}");
         
+        // Toca o som do bônus se houver
+        if (somBonus != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(somBonus);
+            Debug.Log("[Bonus] Som do bônus reproduzido!");
+        }
+        
         if (gameObject.CompareTag("BonusArtefato"))
         {
             Debug.Log("[Bonus] É um BonusArtefato!");
@@ -120,9 +138,17 @@ public class Bonus : MonoBehaviour
         }
         else if (gameObject.CompareTag("BonusTroll"))
         {
-            Debug.Log("[Bonus] É um BonusTroll! Matando o player...");
-            // Mata o player e recarrega a cena (volta ao início da fase)
-            MatarPlayer();
+            Debug.Log("[Bonus] É um BonusTroll! Retornando player à posição inicial...");
+            // Retorna o player à posição inicial
+            RetornarPlayerAoPontoInicial(player);
+            
+            // Ativa o artefato se houver um configurado (opcional)
+            if (artefatoParaAtivar != null)
+            {
+                Debug.Log($"[Bonus] Ativando artefato: {artefatoParaAtivar.name}");
+                artefatoParaAtivar.SetActive(true);
+                StartCoroutine(AnimarArtefatoSubindo(artefatoParaAtivar));
+            }
         }
         else
         {
@@ -130,10 +156,65 @@ public class Bonus : MonoBehaviour
         }
     }
     
-    void MatarPlayer()
+    void RetornarPlayerAoPontoInicial(GameObject player)
     {
-        // Recarrega a cena imediatamente (volta ao início da fase)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("[Bonus] RetornarPlayerAoPontoInicial chamado!");
+        
+        // Primeiro tenta procurar por um GameObject com tag "Respawn" na cena
+        try
+        {
+            GameObject pontoRespawn = GameObject.FindGameObjectWithTag("Respawn");
+            
+            if (pontoRespawn != null)
+            {
+                Debug.Log($"[Bonus] Ponto de respawn encontrado em: {pontoRespawn.transform.position}");
+                
+                // Teleporta o player para o ponto de respawn
+                player.transform.position = pontoRespawn.transform.position;
+                
+                // Reseta a velocidade do Rigidbody2D se houver
+                Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.velocity = Vector2.zero;
+                    Debug.Log("[Bonus] Velocidade do player resetada");
+                }
+                
+                Debug.Log($"[Bonus] ✅ Player retornou ao ponto de respawn: {pontoRespawn.transform.position}");
+                return;
+            }
+        }
+        catch (UnityException)
+        {
+            Debug.LogWarning("[Bonus] Tag 'Respawn' não existe no projeto!");
+        }
+        
+        // Se não encontrou o ponto de respawn, procura pela posição inicial salva em um script do player
+        // Tenta pegar o componente PlayerController do Tarodev
+        var playerController = player.GetComponent<TarodevController.PlayerController>();
+        if (playerController != null)
+        {
+            // Reseta a velocidade
+            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.velocity = Vector2.zero;
+            }
+            
+            // Como o PlayerController do Tarodev não tem posição inicial salva,
+            // vamos procurar por "SpawnPoint" ou usar uma posição padrão
+            GameObject spawnPoint = GameObject.Find("SpawnPoint");
+            if (spawnPoint != null)
+            {
+                player.transform.position = spawnPoint.transform.position;
+                Debug.Log($"[Bonus] ✅ Player retornou ao SpawnPoint: {spawnPoint.transform.position}");
+                return;
+            }
+        }
+        
+        Debug.LogWarning("[Bonus] ⚠️ Nenhum ponto de respawn encontrado! Opções:\n" +
+            "1. Crie um GameObject vazio com a tag 'Respawn' na posição inicial do player\n" +
+            "2. Ou crie um GameObject chamado 'SpawnPoint' na posição inicial do player");
     }
     
     IEnumerator AnimarArtefatoSubindo(GameObject artefato)

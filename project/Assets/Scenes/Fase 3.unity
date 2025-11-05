@@ -383,8 +383,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f8da0742c2652b34e95769064416a375, type: 3}
-  m_Resource: {fileID: 8300000, guid: f8da0742c2652b34e95769064416a375, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eaeb6f8180f29214aaa68b98a8cd9eda, type: 3}
+  m_Resource: {fileID: 8300000, guid: eaeb6f8180f29214aaa68b98a8cd9eda, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
@@ -2271,6 +2271,7 @@ MonoBehaviour:
   duracaoBalanco: 0.1
   alturaSubidaArtefato: 0.7
   duracaoSubidaArtefato: 0.3
+  somBonus: {fileID: 0}
 --- !u!61 &1090569638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2931,6 +2932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usarRespawn: 0
   distanciaDeteccao: 1.9
   velocidadeMovimento: 3
   tipoMovimento: 0
@@ -3088,6 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40566bee8ed2414c8910563da3d0614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usarRespawn: 0
 --- !u!61 &1626873927
 BoxCollider2D:
   m_ObjectHideFlags: 0

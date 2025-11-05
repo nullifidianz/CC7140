@@ -3147,8 +3147,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ceda5c4acd3d5af478f3c786368d72bf, type: 3}
-  m_Resource: {fileID: 8300000, guid: ceda5c4acd3d5af478f3c786368d72bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4ba19bb39a6b0b64393a5c22620aa7be, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4ba19bb39a6b0b64393a5c22620aa7be, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
@@ -3266,7 +3266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usarRespawn: 0
-  distanciaDeteccao: 5.45
+  distanciaDeteccao: 5.59
   velocidadeMovimento: 10
   tipoMovimento: 0
   distanciaMovimento: -20
@@ -3744,7 +3744,7 @@ Transform:
   m_GameObject: {fileID: 1082978658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.68, y: 2.16, z: 0}
+  m_LocalPosition: {x: 9.69, y: 2.12, z: 0}
   m_LocalScale: {x: 0.37642756, y: 0.37642756, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4083,7 +4083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usarRespawn: 0
-  distanciaDeteccao: 1.15
+  distanciaDeteccao: 1.3
   velocidadeMovimento: 2
   tipoMovimento: 0
   distanciaMovimento: 0.35
@@ -4203,7 +4203,7 @@ Transform:
   m_GameObject: {fileID: 1232200387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4119997, y: 2.738, z: 0}
+  m_LocalPosition: {x: 5.68, y: 2.738, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4242,7 +4242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d35d4c565ef99347ab7c6092a063307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceDaProximaFase: 0
+  indiceDaProximaFase: 7
 --- !u!58 &1247896625
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4878,7 +4878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65101b49cee56ad4ca2b67e366ab8beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanciaDeteccao: 6.39
+  distanciaDeteccao: 6.79
   mostrarAreaDeteccao: 1
   tipoMovimento: 0
   distanciaMovimento: 2
@@ -5678,12 +5678,12 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   primeiroMovimentoEixo: 0
   primeiroMovimentoDistancia: -1
-  primeiroMovimentoTempo: 0.5
+  primeiroMovimentoTempo: 1.5
   segundoMovimentoEixo: 1
-  segundoMovimentoDistancia: 7.5
+  segundoMovimentoDistancia: 7.1
   segundoMovimentoVelocidade: 6
   tempoEsperaEntreMovimentos: 0.7
-  tempoEsperaAntesDeVoltar: 1
+  tempoEsperaAntesDeVoltar: 2.5
   movimentoContinuo: 1
   mostrarDebug: 0
 --- !u!212 &1874518700
@@ -5749,7 +5749,7 @@ Transform:
   m_GameObject: {fileID: 1874518698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.29, y: -5.3, z: 0}
+  m_LocalPosition: {x: 5.32, y: -3.97, z: 0}
   m_LocalScale: {x: 2.8773327, y: 2.8773327, z: 2.8773327}
   m_ConstrainProportionsScale: 0
   m_Children: []

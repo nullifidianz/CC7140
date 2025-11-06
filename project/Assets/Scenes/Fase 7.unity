@@ -444,8 +444,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 295f617a6b9dab648813458e036c0a26, type: 3}
-  m_Resource: {fileID: 8300000, guid: 295f617a6b9dab648813458e036c0a26, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a8af0edbc52b232408feeb9ec5e15e7a, type: 3}
+  m_Resource: {fileID: 8300000, guid: a8af0edbc52b232408feeb9ec5e15e7a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c7529f4dd604944878fea40116b884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalParaAtivar: {fileID: 0}
+  portalParaAtivar: {fileID: 698466154}
 --- !u!70 &620405618
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4009,7 +4009,7 @@ Transform:
   m_GameObject: {fileID: 1301003970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.97, y: -3.74, z: 0}
+  m_LocalPosition: {x: -8.94, y: -3.79, z: 0}
   m_LocalScale: {x: 0.16734827, y: 0.16734827, z: 0.16734827}
   m_ConstrainProportionsScale: 0
   m_Children: []

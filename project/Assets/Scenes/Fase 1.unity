@@ -468,7 +468,7 @@ Transform:
   m_GameObject: {fileID: 160376559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.12, y: -0.27, z: -0.08522993}
+  m_LocalPosition: {x: 8.75, y: -0.3, z: -0.08522993}
   m_LocalScale: {x: 0.281, y: 0.281, z: 0.281}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65101b49cee56ad4ca2b67e366ab8beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanciaDeteccao: 1.44
+  distanciaDeteccao: 1.4
   mostrarAreaDeteccao: 1
   tipoMovimento: 0
   distanciaMovimento: 1.45
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usarRespawn: 0
-  distanciaDeteccao: 1.25
+  distanciaDeteccao: 1.27
   velocidadeMovimento: 3
   tipoMovimento: 1
   distanciaMovimento: 0.9
@@ -4048,7 +4048,7 @@ Transform:
   m_GameObject: {fileID: 1468339833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.96, y: -3.697, z: 0}
+  m_LocalPosition: {x: 8.1, y: -3.697, z: 0}
   m_LocalScale: {x: 0.8262, y: 0.8262, z: 0.8262}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4683,7 +4683,7 @@ Transform:
   m_GameObject: {fileID: 1731672886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.89, y: -1.68, z: 0}
+  m_LocalPosition: {x: -8.95, y: -1.67, z: 0}
   m_LocalScale: {x: 0.16734827, y: 0.16734827, z: 0.16734827}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5107,7 +5107,7 @@ Transform:
   m_GameObject: {fileID: 1791570053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.31, y: -3.697, z: 0}
+  m_LocalPosition: {x: 9.48, y: -3.697, z: 0}
   m_LocalScale: {x: 0.8262, y: 0.8262, z: 0.8262}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5597,7 +5597,7 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   tipoMovimento: 1
   distanciaMovimento: 2
-  velocidadeMovimento: 15
+  velocidadeMovimento: 20
   tempoNoMovimento: 2
   tempoEspera: 15
   apenasComPlayer: 1

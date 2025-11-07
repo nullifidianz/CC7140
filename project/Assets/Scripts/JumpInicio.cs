@@ -50,15 +50,21 @@ public class JumpInicio : MonoBehaviour
     }
 
     private int GetWallJumpDirection(){
+        // Verifica parede à direita - só permite wall jump se estiver se movendo para a direita
         if(Physics2D.Raycast(transform.position, Vector2.right, playerHalfWidth + 0.1f, LayerMask.GetMask("Wall"))){
-            return -1;
+            // Só permite wall jump se estiver se movendo em direção à parede (ou parado)
+            if(rb.velocity.x >= -0.1f){
+                return -1; // Pula para a esquerda
+            }
         }
+        // Verifica parede à esquerda - só permite wall jump se estiver se movendo para a esquerda
         else if(Physics2D.Raycast(transform.position, Vector2.left, playerHalfWidth + 0.1f, LayerMask.GetMask("Wall"))){
-            return 1;
+            // Só permite wall jump se estiver se movendo em direção à parede (ou parado)
+            if(rb.velocity.x <= 0.1f){
+                return 1; // Pula para a direita
+            }
         }
-        else{
-            return 0;
-        }
+        return 0;
     }
 
     private bool GetIsGrounded(){

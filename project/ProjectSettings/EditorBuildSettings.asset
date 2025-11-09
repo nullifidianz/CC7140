@@ -10,10 +10,10 @@ EditorBuildSettings:
     guid: d4d776ea1ce4b7a45b62e1a9ad94be14
   - enabled: 1
     path: Assets/Scenes/Fase 1.unity
-    guid: 4cdf8e5da96d9e543b59df5987b24b5d
+    guid: 0a239894814a86a4aa0933962d0ad947
   - enabled: 1
     path: Assets/Scenes/Fase 2.unity
-    guid: 0a239894814a86a4aa0933962d0ad947
+    guid: 4cdf8e5da96d9e543b59df5987b24b5d
   - enabled: 1
     path: Assets/Scenes/Fase 3.unity
     guid: fc4e485e49ea5e545ac1d3fb8643fa7f
@@ -29,5 +29,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase 7.unity
     guid: a12c029fd6dcd1f4d880546e17eed4b2
+  - enabled: 1
+    path: Assets/Scenes/Tela Inicial.unity
+    guid: 8ce8ed3e3d5025b4aa208820a3df423b
+  - enabled: 1
+    path: Assets/Scenes/Como Jogar.unity
+    guid: 5f3b507bfbc154e4c8bfab8d29d83bbb
+  - enabled: 1
+    path: Assets/Scenes/Historia.unity
+    guid: 89cb3aae005edc9469e607a345fd926a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

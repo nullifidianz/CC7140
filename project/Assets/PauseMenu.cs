@@ -132,25 +132,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (showDebug)
         {
-            Debug.Log("[PauseMenu] Voltando ao menu principal...");
+            Debug.Log("[PauseMenu] Voltando ao menu principal (cena 0)...");
         }
         
         Time.timeScale = 1f; // Garante que o tempo volta ao normal
-        
-        // Se o nome da cena foi especificado, usa ele
-        if (!string.IsNullOrEmpty(menuPrincipalNome))
-        {
-            SceneManager.LoadScene(menuPrincipalNome);
-        }
-        // Senão, usa o índice
-        else if (menuPrincipalIndex >= 0 && menuPrincipalIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(menuPrincipalIndex);
-        }
-        else
-        {
-            Debug.LogError("[PauseMenu] Índice do menu principal inválido!");
-        }
+        SceneManager.LoadScene(0); // Carrega a cena 0 (menu inicial)
     }
 
     // Vai para a cena de Como Jogar

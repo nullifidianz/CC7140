@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tela Inicial.unity
+    guid: 8ce8ed3e3d5025b4aa208820a3df423b
+  - enabled: 1
     path: Assets/Scenes/Biblioteca.unity
     guid: d4d776ea1ce4b7a45b62e1a9ad94be14
   - enabled: 1
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase 7.unity
     guid: a12c029fd6dcd1f4d880546e17eed4b2
-  - enabled: 1
-    path: Assets/Scenes/Tela Inicial.unity
-    guid: 8ce8ed3e3d5025b4aa208820a3df423b
   - enabled: 1
     path: Assets/Scenes/Como Jogar.unity
     guid: 5f3b507bfbc154e4c8bfab8d29d83bbb

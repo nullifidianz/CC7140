@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d35d4c565ef99347ab7c6092a063307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceDaProximaFase: 2
+  indiceDaProximaFase: 3
 --- !u!58 &1898635313
 CircleCollider2D:
   m_ObjectHideFlags: 0

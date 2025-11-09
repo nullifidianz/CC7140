@@ -530,10 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b657430ffbce9546a5bf79a0f6cb74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 8
+  sceneIndex: 0
   sceneName: 
   telaInicialNome: 
-  telaInicialIndex: 8
+  telaInicialIndex: 0
 --- !u!114 &652650300
 MonoBehaviour:
   m_ObjectHideFlags: 0

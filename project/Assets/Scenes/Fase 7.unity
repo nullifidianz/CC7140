@@ -2387,6 +2387,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &508114161
@@ -2754,6 +2756,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &621821505
@@ -2958,6 +2962,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &662486636
@@ -3222,7 +3228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d35d4c565ef99347ab7c6092a063307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceDaProximaFase: 0
+  indiceDaProximaFase: 12
+  numeroFaseAtual: 1
+  liberarProximaFase: 1
 --- !u!58 &698466156
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4061,6 +4069,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &916867418
@@ -4779,6 +4789,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &1320113212
@@ -5015,6 +5027,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &1403048428

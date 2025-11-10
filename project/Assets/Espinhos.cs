@@ -40,6 +40,13 @@ public class Espinhos : MonoBehaviour
     [Tooltip("Movimento contínuo (ciclo infinito) ou apenas uma vez")]
     public bool movimentoContinuo = true;
     
+    [Tooltip("Usar tempo de espera antes de começar o movimento pela primeira vez")]
+    public bool usarTempoEsperaInicial = false;
+    
+    [Tooltip("Tempo de espera antes de iniciar o movimento (em segundos)")]
+    [Min(0)]
+    public float tempoEsperaInicial = 1f;
+    
     [Header("Requer Artefato")]
     [Tooltip("Se marcado, o espinho só começa a funcionar após o player pegar o artefato")]
     public bool requerArtefato = false;
@@ -217,16 +224,42 @@ public class Espinhos : MonoBehaviour
         switch (estadoAtual)
         {
             case EstadoEspinho.Embaixo:
-                // Se for a primeira ativação, sobe imediatamente SEM DELAY
+                // Se for a primeira ativação
                 if (primeiraAtivacao)
                 {
-                    primeiraAtivacao = false;
-                    estadoAtual = EstadoEspinho.Subindo;
-                    contadorTempo = 0f;
-                    
-                    if (mostrarDebug)
+                    // Se usar tempo de espera inicial, aguarda antes de subir
+                    if (usarTempoEsperaInicial)
                     {
-                        Debug.Log("[Espinhos] >>> PRIMEIRA ATIVAÇÃO! Subindo IMEDIATAMENTE (sem esperar) <<<");
+                        contadorTempo += Time.deltaTime;
+                        
+                        if (mostrarDebug && contadorTempo < 0.1f)
+                        {
+                            Debug.Log($"[Espinhos] >>> PRIMEIRA ATIVAÇÃO! Aguardando {tempoEsperaInicial}s antes de iniciar movimento <<<");
+                        }
+                        
+                        if (contadorTempo >= tempoEsperaInicial)
+                        {
+                            primeiraAtivacao = false;
+                            estadoAtual = EstadoEspinho.Subindo;
+                            contadorTempo = 0f;
+                            
+                            if (mostrarDebug)
+                            {
+                                Debug.Log($"[Espinhos] Tempo de espera inicial completo ({tempoEsperaInicial}s)! Iniciando movimento!");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Sem delay, sobe imediatamente
+                        primeiraAtivacao = false;
+                        estadoAtual = EstadoEspinho.Subindo;
+                        contadorTempo = 0f;
+                        
+                        if (mostrarDebug)
+                        {
+                            Debug.Log("[Espinhos] >>> PRIMEIRA ATIVAÇÃO! Subindo IMEDIATAMENTE (sem esperar) <<<");
+                        }
                     }
                 }
                 else if (movimentoContinuo && cicloAtivado)

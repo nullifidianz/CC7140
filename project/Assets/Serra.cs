@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class Serra : MonoBehaviour
 {
     [Header("Configurações de Morte")]
+    [Tooltip("Se marcado, a serra pode matar o player. Se não, a serra não causa dano.")]
+    public bool matavel = true;
+    
     [Tooltip("Se marcado, teleporta o player para o Respawn. Se não, reseta a cena.")]
     public bool usarRespawn = false;
 
@@ -367,6 +370,16 @@ public class Serra : MonoBehaviour
 
     void MatarPlayer()
     {
+        // Se a serra não é matável, não faz nada
+        if (!matavel)
+        {
+            if (mostrarDebug)
+            {
+                Debug.Log("[Serra] Player tocou na serra, mas ela não é matável!");
+            }
+            return;
+        }
+        
         // Busca o player para teleportar
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         

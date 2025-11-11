@@ -1128,6 +1128,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &343872467
@@ -1505,8 +1507,8 @@ Transform:
   m_GameObject: {fileID: 423414126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9677805, y: 1.9677805, z: 1.9677805}
+  m_LocalPosition: {x: 0.1884, y: -0.1059, z: 0}
+  m_LocalScale: {x: 1.9394444, y: 1.9394444, z: 1.9394444}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1667,6 +1669,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!1 &544401477
@@ -2588,6 +2592,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!1 &731760685
@@ -4118,6 +4124,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!1 &1326904596
@@ -5593,6 +5601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceDaProximaFase: 3
+  numeroFaseAtual: 1
+  liberarProximaFase: 1
 --- !u!58 &1898635313
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5785,6 +5795,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!1 &1978398142

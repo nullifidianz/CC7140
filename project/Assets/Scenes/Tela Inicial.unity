@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -728.33, y: 26}
+  m_AnchoredPosition: {x: -731, y: -37}
   m_SizeDelta: {x: 307.076, y: 78.1165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &35956198
@@ -325,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -703.13, y: -273}
+  m_AnchoredPosition: {x: -705.8, y: -326}
   m_SizeDelta: {x: 357.4985, y: 88.8531}
   m_Pivot: {x: 0.5, y: -0.000000044703484}
 --- !u!114 &92505120
@@ -493,7 +493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -774.96, y: -362}
+  m_AnchoredPosition: {x: -777.63, y: -405}
   m_SizeDelta: {x: 213.8226, y: 92.1086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183068850
@@ -679,8 +679,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f992f06e2b2b28a4e8364cd534135866, type: 3}
-  m_Resource: {fileID: 8300000, guid: f992f06e2b2b28a4e8364cd534135866, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d468385c642115f48ab7f1c389914b53, type: 3}
+  m_Resource: {fileID: 8300000, guid: d468385c642115f48ab7f1c389914b53, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1050,7 +1050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -728.34, y: 143}
+  m_AnchoredPosition: {x: -731.01, y: 80.000015}
   m_SizeDelta: {x: 307.076, y: 78.1165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632513284
@@ -1218,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -652.8895, y: -95.9501}
+  m_AnchoredPosition: {x: -655.5595, y: -158.95009}
   m_SizeDelta: {x: 457.971, y: 86.792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659275802

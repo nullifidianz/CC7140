@@ -189,10 +189,9 @@ public class Bonus : MonoBehaviour
             Debug.LogWarning("[Bonus] Tag 'Respawn' não existe no projeto!");
         }
         
-        // Se não encontrou o ponto de respawn, procura pela posição inicial salva em um script do player
-        // Tenta pegar o componente PlayerController do Tarodev
-        var playerController = player.GetComponent<TarodevController.PlayerController>();
-        if (playerController != null)
+        // Se não encontrou o ponto de respawn, procura por "SpawnPoint"
+        GameObject spawnPoint = GameObject.Find("SpawnPoint");
+        if (spawnPoint != null)
         {
             // Reseta a velocidade
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
@@ -201,15 +200,9 @@ public class Bonus : MonoBehaviour
                 rb.velocity = Vector2.zero;
             }
             
-            // Como o PlayerController do Tarodev não tem posição inicial salva,
-            // vamos procurar por "SpawnPoint" ou usar uma posição padrão
-            GameObject spawnPoint = GameObject.Find("SpawnPoint");
-            if (spawnPoint != null)
-            {
-                player.transform.position = spawnPoint.transform.position;
-                Debug.Log($"[Bonus] ✅ Player retornou ao SpawnPoint: {spawnPoint.transform.position}");
-                return;
-            }
+            player.transform.position = spawnPoint.transform.position;
+            Debug.Log($"[Bonus] ✅ Player retornou ao SpawnPoint: {spawnPoint.transform.position}");
+            return;
         }
         
         Debug.LogWarning("[Bonus] ⚠️ Nenhum ponto de respawn encontrado! Opções:\n" +

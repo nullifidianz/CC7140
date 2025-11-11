@@ -25,7 +25,6 @@ public class AtivarCutscene : MonoBehaviour
     public GameObject portalObject;  // Arraste o GameObject do portal aqui
     
     private bool cutsceneAtivada = false;      // Impede que a cutscene seja ativada múltiplas vezes
-    private PlayerMovement playerMovement;
     private PlayerMovementInicio playerMovementInicio;
     private CinemachineBrain cinemachineBrain;
     private GameObject artefatoColetado;  // Referência ao artefato que ativou a cutscene
@@ -38,8 +37,7 @@ public class AtivarCutscene : MonoBehaviour
             timelineDirector = FindFirstObjectByType<PlayableDirector>();
         }
         
-        // Busca os scripts de movimento do jogador
-        playerMovement = GetComponent<PlayerMovement>();
+        // Busca o script de movimento do jogador
         playerMovementInicio = GetComponent<PlayerMovementInicio>();
         
         // Garante que o Cinemachine Brain está ativo
@@ -91,17 +89,9 @@ public class AtivarCutscene : MonoBehaviour
             }
             
             // Desabilita o controle do jogador durante a cutscene
-            if (desabilitarControles)
+            if (desabilitarControles && playerMovementInicio != null)
             {
-                if (playerMovement != null)
-                {
-                    playerMovement.enabled = false;
-                }
-                
-                if (playerMovementInicio != null)
-                {
-                    playerMovementInicio.enabled = false;
-                }
+                playerMovementInicio.enabled = false;
             }
             
             // Inicia a cutscene
@@ -147,17 +137,9 @@ public class AtivarCutscene : MonoBehaviour
         }
         
         // Reabilita o controle do jogador
-        if (desabilitarControles)
+        if (desabilitarControles && playerMovementInicio != null)
         {
-            if (playerMovement != null)
-            {
-                playerMovement.enabled = true;
-            }
-            
-            if (playerMovementInicio != null)
-            {
-                playerMovementInicio.enabled = true;
-            }
+            playerMovementInicio.enabled = true;
         }
     }
 }

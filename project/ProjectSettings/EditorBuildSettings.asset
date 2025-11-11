@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase Retorno.unity
     guid: 47f42f555a2c4644190e8b2c5efb9640
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: b90cfd033178dde46a1d0cd0bafc8672
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

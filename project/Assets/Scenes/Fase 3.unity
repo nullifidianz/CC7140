@@ -2452,7 +2452,7 @@ Transform:
   m_GameObject: {fileID: 936589609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.57, y: 0.66, z: 0}
+  m_LocalPosition: {x: -8.51, y: 0.68, z: 0}
   m_LocalScale: {x: 0.16734827, y: 0.16734827, z: 0.16734827}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3568,6 +3568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceDaProximaFase: 5
+  numeroFaseAtual: 1
+  liberarProximaFase: 1
 --- !u!58 &1403312289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3881,6 +3883,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 1
   mostrarDebug: 0
 --- !u!61 &1570335421

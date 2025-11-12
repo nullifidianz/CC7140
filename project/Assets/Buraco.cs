@@ -22,6 +22,8 @@ public class Buraco : MonoBehaviour
             else
             {
                 Debug.Log("[Buraco] Player caiu no buraco! Resetando a cena...");
+                // Incrementa o contador de mortes
+                ContadorMortes.IncrementarMorte();
                 // Recarrega a cena imediatamente (volta ao início da fase)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -40,6 +42,8 @@ public class Buraco : MonoBehaviour
         catch (UnityException)
         {
             Debug.LogWarning("[Buraco] Tag 'Respawn' não existe no projeto! Resetando a cena...");
+            // Incrementa o contador de mortes
+            ContadorMortes.IncrementarMorte();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             yield break;
         }
@@ -67,6 +71,8 @@ public class Buraco : MonoBehaviour
         else
         {
             Debug.LogWarning("[Buraco] ⚠️ Nenhum GameObject com tag 'Respawn' encontrado! Resetando a cena...");
+            // Incrementa o contador de mortes
+            ContadorMortes.IncrementarMorte();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

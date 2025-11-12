@@ -394,6 +394,8 @@ public class Serra : MonoBehaviour
             else
             {
                 Debug.Log("[Serra] Player tocou na serra! Resetando a cena...");
+                // Incrementa o contador de mortes
+                ContadorMortes.IncrementarMorte();
                 // Recarrega a cena imediatamente (volta ao início da fase)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -412,6 +414,8 @@ public class Serra : MonoBehaviour
         catch (UnityException)
         {
             Debug.LogWarning("[Serra] Tag 'Respawn' não existe no projeto! Resetando a cena...");
+            // Incrementa o contador de mortes
+            ContadorMortes.IncrementarMorte();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             yield break;
         }
@@ -439,6 +443,8 @@ public class Serra : MonoBehaviour
         else
         {
             Debug.LogWarning("[Serra] ⚠️ Nenhum GameObject com tag 'Respawn' encontrado! Resetando a cena...");
+            // Incrementa o contador de mortes
+            ContadorMortes.IncrementarMorte();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

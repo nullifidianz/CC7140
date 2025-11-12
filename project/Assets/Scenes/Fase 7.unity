@@ -3229,7 +3229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceDaProximaFase: 12
-  numeroFaseAtual: 1
+  numeroFaseAtual: 8
   liberarProximaFase: 1
 --- !u!58 &698466156
 CircleCollider2D:

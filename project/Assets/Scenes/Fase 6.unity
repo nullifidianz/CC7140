@@ -1109,6 +1109,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &341470754
@@ -1698,6 +1700,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &421718002
@@ -3670,6 +3674,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &858239546
@@ -3972,6 +3978,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 1
   mostrarDebug: 0
 --- !u!61 &935741291
@@ -4868,6 +4876,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 0
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &1232200389
@@ -5019,6 +5029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceDaProximaFase: 8
+  numeroFaseAtual: 7
+  liberarProximaFase: 1
 --- !u!58 &1247896625
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6607,6 +6619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241ae511622413248ae7a71f70b1d88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matavel: 1
   usarRespawn: 0
   velocidadeRotacao: 720
   distanciaDeteccao: 4.67

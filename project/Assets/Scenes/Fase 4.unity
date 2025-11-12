@@ -2588,6 +2588,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &856231031
@@ -3546,6 +3548,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!212 &1399483189
@@ -4310,6 +4314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indiceDaProximaFase: 6
+  numeroFaseAtual: 5
+  liberarProximaFase: 1
 --- !u!58 &1682272244
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5752,6 +5758,8 @@ MonoBehaviour:
   mostrarAreaDeteccao: 1
   apenasComPlayer: 1
   movimentoContinuo: 1
+  usarTempoEsperaInicial: 0
+  tempoEsperaInicial: 1
   requerArtefato: 0
   mostrarDebug: 0
 --- !u!61 &2023474581

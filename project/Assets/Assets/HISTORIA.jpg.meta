@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HISTORIA_0: 8626812884558639242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

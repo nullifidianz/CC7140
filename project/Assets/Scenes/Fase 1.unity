@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usarRespawn: 1
+  usarRespawn: 0
   distanciaDeteccao: 1.7
   velocidadeMovimento: 3
   tipoMovimento: 0
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usarRespawn: 1
+  usarRespawn: 0
   distanciaDeteccao: 5
   velocidadeMovimento: 3
   tipoMovimento: 0
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usarRespawn: 1
+  usarRespawn: 0
   distanciaDeteccao: 1.9
   velocidadeMovimento: 3
   tipoMovimento: 0
@@ -4114,7 +4114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usarRespawn: 1
+  usarRespawn: 0
   distanciaDeteccao: 5
   velocidadeMovimento: 3
   tipoMovimento: 0
@@ -5785,7 +5785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae35563ec2cbe8428bc8c6605e11e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usarRespawn: 1
+  usarRespawn: 0
   distanciaDeteccao: 5
   velocidadeMovimento: 3
   tipoMovimento: 0

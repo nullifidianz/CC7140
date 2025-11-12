@@ -252,7 +252,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gemini_Generated_Image_8exn478exn478exn-removebg-preview_0: 5078078257979483887
+      Gemini_Generated_Image_8exn478exn478exn-removebg-preview_1: -8865530851934280909
+      Gemini_Generated_Image_8exn478exn478exn-removebg-preview_2: 2559879002930625700
+      Gemini_Generated_Image_8exn478exn478exn-removebg-preview_3: 7856528294216990892
+      Gemini_Generated_Image_8exn478exn478exn-removebg-preview_4: -2418817237217151645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
